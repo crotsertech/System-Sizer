@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>system-sizer.png</file>
+    </qresource>
+</RCC>
