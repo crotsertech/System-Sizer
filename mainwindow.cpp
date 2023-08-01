@@ -60,11 +60,11 @@ void MainWindow::calculate()
     f3 = ui->f3LineEdit->text().toDouble();
     QString salt_mode = ui->saltLineEdit->currentText(); // Corrected: Use QLineEdit, not QComboBox
 
-    if (salt_mode == "High Efficiency")
+    if (salt_mode == "High Efficiency (3lb)")
         salt = 15000;
-    else if (salt_mode == "Standard")
+    else if (salt_mode == "Standard (6lb)")
         salt = 25000;
-    else if (salt_mode == "High Capacity")
+    else if (salt_mode == "High Capacity (12lb)")
         salt = 30000;
     else
     {
