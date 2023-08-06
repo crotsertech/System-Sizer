@@ -2,34 +2,32 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QDesktopServices>
+#include <QUrl>
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    void calculate(); // Declaration for the calculate() slot
+    void showHelp();
+    void showLicense();
+    void openWebUrl();
+    void openDonateUrl();
+    void openDonateUrl2();
+    void calculate();
 
 private:
     Ui::MainWindow *ui;
-
-private slots:
-    void showHelp();
-
-private slots:
-    void showLicense();
-
-private slots:
-    void openWebUrl();
-
 };
 
 #endif // MAINWINDOW_H

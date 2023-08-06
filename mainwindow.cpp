@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->helpButton, &QPushButton::clicked, this, &MainWindow::showHelp); //Warranty disclaimer
     connect(ui->licenseButton, &QPushButton::clicked, this, &MainWindow::showLicense); // GPLv3
     connect(ui->webButton, &QPushButton::clicked, this, &MainWindow::openWebUrl); // Button to file bug report
+    connect(ui->donateButton, &QPushButton::clicked, this, &MainWindow::openDonateUrl); // Button to donate to the author on Ko-Fi
+    connect(ui->donateButton2, &QPushButton::clicked, this, &MainWindow::openDonateUrl2); // Button to donate to the author on Paypal
 
 }
 
@@ -44,6 +46,15 @@ void MainWindow::openWebUrl()
     QDesktopServices::openUrl(QUrl("https://github.com/crotsertech/System-Sizer/issues/new")); // URL to file a bug report
 }
 
+void MainWindow::openDonateUrl()
+{
+    QDesktopServices::openUrl(QUrl("https://ko-fi.com/ntcrotser")); // URL to donate to the author
+}
+
+void MainWindow::openDonateUrl2()
+{
+    QDesktopServices::openUrl(QUrl("https://www.paypal.com/paypalme/crotsertech")); // URL to donate to the author
+}
 
 
 
